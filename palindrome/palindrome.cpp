@@ -19,8 +19,19 @@ int palindrome_check(std::string str) { // checks for palindrome string
 
 int main()
 {
-	std::string a;
-	std::getline(std::cin, a);
-	std::cout << strrev(a) << palindrome_check(a);
+	int program = 1;
+
+	while (program) {
+		std::string a;
+		std::getline(std::cin, a);
+
+		if (palindrome_check(a))
+			std::cout << "Palindrome - TRUE" 
+			<< std::endl << "Reversed - " + strrev(a) 
+			<< std::endl << std::endl;
+		else std::cout << "Palindrome - FALSE" 
+			<< std::endl << "Reversed - " + strrev(a) 
+			<< std::endl << std::endl;
+	}
 	return 0;
 }
